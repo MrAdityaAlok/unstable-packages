@@ -48,7 +48,7 @@ termux_step_configure () {
 termux_step_make_install () {
 	if [ ! -f "/usr/bin/llvm-dwp" ]; then
 		# errr yeah this needs to be here for docker stuff
-		sudo ln -s /usr/bin/llvm-dwp-10 /usr/bin/llvm-dwp
+		ln -s /usr/bin/llvm-dwp-10 /usr/bin/llvm-dwp
 	fi
 	if [ $TERMUX_ARCH = "x86_64" ]; then
 		mv $TERMUX_PREFIX ${TERMUX_PREFIX}a
