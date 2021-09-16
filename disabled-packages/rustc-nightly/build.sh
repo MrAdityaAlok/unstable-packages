@@ -4,7 +4,7 @@ TERMUX_PKG_DEPENDS="libc++, clang, openssl, lld, zlib, libllvm"
 TERMUX_PKG_LICENSE="MIT"
 TERMUX_PKG_MAINTAINER="@its-pointless"
 TERMUX_PKG_VERSION=1.52.0
-TERMUX_PKG_REVISION=1
+TERMUX_PKG_REVISION=2
 TERMUX_PKG_SRCURL=https://static.rust-lang.org/dist/2021-02-24/rustc-nightly-src.tar.xz
 TERMUX_PKG_SHA256=80536b0050fc83cdffedf617bac0fd23dc60081adc00648b90404e1a14baba18
 TERMUX_PKG_KEEP_SHARE_DOC=true
@@ -100,7 +100,7 @@ termux_step_post_massage () {
 	ln -sf $TERMUX_PREFIX/bin/lld $TERMUX_PKG_MASSAGEDIR$RUST_PREFIX/bin/rust-lld
 	rm -f ../bin/llvm-dwp
 	if [ $TERMUX_ARCH = "x86_64" ]; then
-		rm -f lib/libtinfo.so.6
+		rm -f $TERMUX_PKG_MASSAGEDIR/$TERMUX_PREFIX/lib/libtinfo.so.6
 	fi
 	rm	$TERMUX_STANDALONE_TOOLCHAIN/sysroot/usr/lib/$TERMUX_HOST_PLATFORM/$TERMUX_PKG_API_LEVEL/libLLVM-11.1.0.so
 }

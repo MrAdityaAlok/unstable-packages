@@ -6,12 +6,9 @@
 
 There are located packages which were requested, but not added to the [main][termux-packages] Termux repository due to various reasons. Packages available here may have lower quality, be unstable or not work at all. Report issues to https://github.com/termux/termux-packages/issues.
 
-**Donate in cryptocurrency ([TRX](https://tron.network/trx?lng=en) or TRC-10 tokens)**:
-```
-TM5LFhqwBd9VNXCxCwNerEuQbYu4RnsniH
-```
+## Support
 
-<img src=".github/static/donation-tronlink-qr.jpg" alt="TM5LFhqwBd9VNXCxCwNerEuQbYu4RnsniH" width="128px"></img>
+[![Donate with Ethereum](https://en.cryptobadges.io/badge/big/0x3CC8F61862e5c3Ad62A7eea0c3048853FA31af23?showBalance=true)](https://en.cryptobadges.io/donate/0x3CC8F61862e5c3Ad62A7eea0c3048853FA31af23)
 
 ## How to enable this repository
 
@@ -79,7 +76,6 @@ Here is a list of available packages with some information about their usability
 | racket            |             |             |                                                  |
 | rapidjson         |             |             | Not tested.                                      |
 | restic-server     |             |             | Not tested.                                      |
-| rustc-nightly     |             |             | Nightly branch of Rust.                          |
 | samba             |             | preferable  | smbd CPU usage may go to 100%. Hardcoded root account. |
 | shtool            |             |             | Not tested.                                      |
 | smalltalk         |             |             |                                                  |
@@ -106,5 +102,6 @@ These packages are excluded from main source tree. Some of them may be available
 
 - **roc** - doesn't support CI autobuilds as requires Pulseaudio build directory.
 
+- **rustc-nightly** - needs update & fix for build.sh.
 
 [termux-packages]: <https://github.com/termux/termux-packages>
